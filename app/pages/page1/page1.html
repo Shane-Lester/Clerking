@@ -1,0 +1,19 @@
+<ion-navbar *navbar>
+  <ion-title>History</ion-title>
+</ion-navbar>
+
+<ion-content padding class="page1">
+  <ion-card>
+      <ion-card-header text-center>
+      History taking
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item  *ngFor = "let topic of topics, let i = index" (click)= "showTopic($event, topic, i)">
+            {{topic.title}}
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
