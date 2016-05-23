@@ -12,9 +12,9 @@
       </ion-card-header>
       <ion-card-content>
         <ion-list>
-          <ion-item  *ngFor = "let exam of exams, let i = index" (click)= "showTopic($event, exam, i)">
+          <button ion-item  *ngFor = "let exam of exams, let i = index" (click)= "showTopic($event, exam, i)">
             {{exam.title}}
-          </ion-item>
+          </button>
         </ion-list>
       </ion-card-content>
     </ion-card>

@@ -6,14 +6,16 @@
 
 <ion-content class="page3">
     <ion-card>
+
         <ion-card-header text-center>
             Scales
         </ion-card-header>
         <ion-card-content>
+
           <ion-list>
-            <ion-item  *ngFor = "let scale of scales, let i = index" (click)= "showScale($event, scale, i)">
+            <button secondary ion-item  *ngFor = "let scale of scales, let i = index" (click)= "showScale($event, scale, i)">
               {{scale.title}}
-            </ion-item>
+            </button>
           </ion-list>
         </ion-card-content>
       </ion-card>

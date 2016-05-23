@@ -9,9 +9,9 @@
       </ion-card-header>
       <ion-card-content>
         <ion-list>
-          <ion-item  *ngFor = "let topic of topics, let i = index" (click)= "showTopic($event, topic, i)">
+          <button ion-item  *ngFor = "let topic of topics, let i = index" (click)= "showTopic($event, topic, i)">
             {{topic.title}}
-          </ion-item>
+          </button >
         </ion-list>
       </ion-card-content>
     </ion-card>
