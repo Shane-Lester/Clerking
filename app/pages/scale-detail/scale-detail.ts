@@ -1,6 +1,7 @@
 import {Page, NavController, NavParams} from 'ionic-angular';
 import {DetailPage} from '../detail/detail';
 
+
 /*
   Generated class for the ScaleDetailPage page.
 

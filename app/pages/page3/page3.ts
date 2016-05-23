@@ -1,6 +1,6 @@
 import {Page, NavController} from 'ionic-angular';
 import {ScaleDetailPage} from '../scale-detail/scale-detail';
-
+import {MmsePage} from '../mmse/mmse';
 
 @Page({
     templateUrl: 'build/pages/page3/page3.html'
@@ -78,12 +78,17 @@ export class Page3 {
                     }
                 ]
             },
-            { title: "Mini-Mental Score", description: "Quickly test mental state" },
+            { title: "Mini-Mental State Exam", description: "Quickly test mental state" },
             { title: "Performance status", description: "ECOG performance status rating" }
         ];
 
     }
     showScale(event, scale, index) {
+      if(scale.title == "Mini-Mental State Exam"){
+        this.nav.push(MmsePage);
+      }
+      else{
         this.nav.push(ScaleDetailPage, { scale: scale, scaleIndex: index, ScalePage: this });
     }
+  }
 }
