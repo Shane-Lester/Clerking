@@ -1,4 +1,5 @@
 import {Page, NavController} from 'ionic-angular';
+import {ExamDetailPage} from '../exam-detail/exam-detail';
 
 
 @Page({
@@ -10,11 +11,14 @@ export class Page2 {
     this.nav = nav;
     this.exams =[
 
-      {title:"Cardiovascular Exam", description: ""},
-      {title:"Respiratory Exam", description: ""},
-      {title:"GastroIntestinal Exam", description: ""},
-      {title:"Neurological Exam", description: ""}
+      {title:"Cardiovascular Exam", description: "The first thing in the Cardiovascular Exam is... "},
+      {title:"Respiratory Exam", description: "The first thing in the Respiratory Exam is... "},
+      {title:"GastroIntestinal Exam", description: "The first thing in the GI Exam is... "},
+      {title:"Neurological Exam", description: "The first thing in the Neurological Exam is... "}
     ];
 
+  }
+  showExam(event, exam, index){
+    this.nav.push(ExamDetailPage,{exam:exam});
   }
 }

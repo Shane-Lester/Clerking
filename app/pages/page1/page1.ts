@@ -1,4 +1,5 @@
 import {Page, NavController} from 'ionic-angular';
+import {HistoryDetailPage} from  '../history-detail/history-detail';
 
 
 @Page({
@@ -9,15 +10,18 @@ export class Page1 {
   constructor(public nav: NavController) {
     this.nav = nav;
     this.topics =[
-      {title:"Presenting Complaint PC", description: ""},
-      {title:"History of Presenting Complaint HPC", description: ""},
-      {title:"Drug History DH", description: ""},
-      {title:"Social History SH", description: ""},
-      {title:"Cardiovascular History", description: ""},
-      {title:"Respiratory History", description: ""},
-      {title:"GastroIntestinal History", description: ""},
-      {title:"Neurological History", description: ""}
+      {title:"Presenting Complaint PC", description: "The Presenting Complaint, PC, is.."},
+      {title:"History of Presenting Complaint HPC", description: "The History of Presenting Complaint HP is.. "},
+      {title:"Drug History DH", description: "The Drug History DH is.."},
+      {title:"Social History SH", description: "The Social History SH is.."},
+      {title:"Cardiovascular History", description: "The Cardiovascular History is.."},
+      {title:"Respiratory History", description: "The Respiratory History is.."},
+      {title:"GastroIntestinal History", description: "The GastroIntestinal History is.."},
+      {title:"Neurological History", description: "The Neurological History is.."}
     ]
 
+  }
+  showTopic(event, topic, index){
+    this.nav.push(HistoryDetailPage,{topic:topic});
   }
 }
