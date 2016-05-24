@@ -78,8 +78,36 @@ export class Page3 {
                     }
                 ]
             },
-            { title: "Mini-Mental State Exam", description: "Quickly test mental state" },
-            { title: "Performance status", description: "ECOG performance status rating" }
+            { title: "Mini-Mental State Exam"
+            , description: "MMSE calculator"},
+            { title: "Performance status"
+            , description: "ECOG performance status rating"
+            ,items:[
+              { score:"0",
+              image:false,
+                summary:"Fully active."
+                ,description:"Fully active, able to carry on all pre-disease performance without restriction."}
+                ,{ score:"1",
+                image:false,
+                summary:"Fully active.",
+                  description:"Restricted in physically strenuous activity but ambulatory and able to carry out work of a light or sedentary nature, e.g., light house work, office work "}
+                ,{ score:"2",
+                image:false,
+                summary:"Ambulatory.",
+                  description:"Ambulatory and capable of all selfcare but unable to carry out any work activities. Up and about more than 50% of waking hours."}
+                ,{ score:"3",
+                image:false,
+                summary:"Limited selfcare.",
+                  description:"Capable of only limited selfcare, confined to bed or chair more than 50% of waking hours."}
+                ,{ score:"4",
+                image:false,
+                summary:"Completely disabled.",
+                  description:"Completely disabled. Cannot carry on any selfcare. Totally confined to bed or chair."}
+                ,{ score:"5",
+                image:false,
+                summary:"Dead.",
+                  description:"Dead."}
+            ]}
         ];
 
     }

@@ -12,16 +12,16 @@
 
   <ion-card>
     <ion-card-header text-center>
-      <ion-scroll zooming ="true">
-      <img [src] = "item.image">
-    </ion-scroll>
-      {{item.score}}-{{item.name}}
+      <div class="item item-avatar">
+      <img [src] = "item.image" [hidden] ="!item.image">
+    </div>
+      {{item.score}}-{{item.name}}{{item.summary}}
     </ion-card-header>
     <ion-card-content>
       {{item.description}}
       <br>
       <hr>
-<h2>Questions to consider:</h2>
+<h2 [hidden]="!item.questions">Questions to consider:</h2>
     <ion-list >
       <ion-item *ngFor = "let question of item.questions" text-wrap>{{question}}</ion-item>
     </ion-list>

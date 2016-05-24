@@ -17,9 +17,9 @@
           <ion-list>
             <button secondary ion-item *ngFor = "let item of scale.items" (click) = "itemDetail($event,item)">
               <ion-avatar item-left>
-              <img [src] = "item.image">
+              <img [src] = "item.image" [hidden] ="!item.image">
               </ion-avatar>
-              <h2>{{item.score}}-{{item.name}}
+              <h2 text-wrap>{{item.score}}-{{item.name}}: {{item.summary}}
               </h2>
             </button>
           </ion-list>
