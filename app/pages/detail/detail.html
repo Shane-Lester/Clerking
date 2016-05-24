@@ -12,9 +12,9 @@
 
   <ion-card>
     <ion-card-header text-center>
-      <div class="item item-avatar">
+      <ion-scroll zooming ="true">
       <img [src] = "item.image">
-    </div>
+    </ion-scroll>
       {{item.score}}-{{item.name}}
     </ion-card-header>
     <ion-card-content>

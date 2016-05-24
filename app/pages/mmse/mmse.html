@@ -75,7 +75,9 @@
     </div>
     <div id="Q9">
         <h3>Read this and do as it says</h3>
-        <h4>"Close your eyes."</h4>
+        <div>
+        <img src="img/closeyoureyes.jpg" width = "100%">
+      </div>
         <button (click)="toggleButton(32)" [ngClass]="{'button-balanced': score[32], 'button-danger': !score[32]}">?</button>
     </div>
     <div id="Q10">
@@ -84,9 +86,9 @@
     </div>
     <div id="Q11">
         <h4>Copy this picture</h4>
-        <div class="item item-avatar">
-            <img src="img/mmse.jpg">
-        </div>
+        <div>
+            <img src="img/mmse.jpg" width = "100%">
+      </div>
         <button (click)="toggleButton(34)" [ngClass]="{'button-balanced': score[34], 'button-danger': !score[34]}">10 angles and intersect?</button>
     </div>
     <div>
